@@ -27,7 +27,7 @@ export default function UI() {
   });
 
   return (
-    <div className="w-2/3 mx-auto flex flex-col items-center py-10 gap-2 ">
+    <div className="w-5/6 sm:w-4/5 md:w-3/4 lg:w-2/3 mx-auto flex flex-col items-center py-10 gap-2 ">
       <h1 className="text-xl">TODO LIST</h1>
       <Input
         label="Search TODO"

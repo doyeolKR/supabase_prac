@@ -66,6 +66,7 @@ export default function Todo({ todo }) {
 
       {isEditing ? (
         <IconButton
+          className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10"
           onClick={async () => {
             await updateTodoMutation.mutate();
           }}
@@ -78,6 +79,7 @@ export default function Todo({ todo }) {
         </IconButton>
       ) : (
         <IconButton
+          className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10"
           onClick={() => {
             setIsEditing(true);
           }}
@@ -86,6 +88,7 @@ export default function Todo({ todo }) {
         </IconButton>
       )}
       <IconButton
+        className="h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10"
         onClick={async () => {
           await deleteTodoMutation.mutate();
         }}
@@ -93,7 +96,7 @@ export default function Todo({ todo }) {
         {deleteTodoMutation.isPending ? (
           <Spinner />
         ) : (
-          <i className="fas fa-trash" />
+          <i className="fas fa-trash sm:text-xs" />
         )}
       </IconButton>
     </div>
