@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox, IconButton, Spinner } from "@material-tailwind/react";
+import { Checkbox, IconButton, Spinner, Input } from "@material-tailwind/react";
 import { useState, useRef, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { deleteTodo, updateTodo } from "actions/todo-actions";
@@ -56,7 +56,7 @@ export default function Todo({ todo }) {
       {isEditing ? (
         <input
           ref={inputRef}
-          className="flex-1 border-b-black border-b pb-1"
+          className="flex-1 max-w-xs sm:max-w-none border-b-black border-b pb-1"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
